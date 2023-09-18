@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title" style="color:darkmagenta;">
+                Update task
+              </div>
+            </div>
+            <div class="card-body">
+              <form method="post" class="mt-4">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-success">Update</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

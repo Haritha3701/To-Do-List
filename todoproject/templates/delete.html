@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-5">
+            <div class="alert alert-success">
+                <form method="post">
+                {% csrf_token %}
+                <h4>Are you sure this task is done?</h4>
+                <button type="submit" class="btn btn-primary">Confirm</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
